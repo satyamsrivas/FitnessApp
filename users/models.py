@@ -63,6 +63,7 @@ class FitnessProfile(BaseModel):
     weight = models.DecimalField(max_digits=4,decimal_places=2,help_text="Enter Your Weight In Kg")
     age = models.PositiveIntegerField(validators=[MinValueValidator(1),MaxValueValidator(100)])
     gender = models.CharField(max_length=10,choices=GenderChoices.choices)
+    bmi_test = models.CharField(max_length=20,null=True,blank=True)
     
     @property
     def bmi(self):

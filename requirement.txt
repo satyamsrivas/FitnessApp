@@ -1,0 +1,4 @@
+faker
+django
+django_extension
+python
